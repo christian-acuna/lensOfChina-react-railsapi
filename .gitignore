@@ -16,3 +16,5 @@ vendor/*
 
 # Ignore Byebug command history file.
 .byebug_history
+
+Procfile
