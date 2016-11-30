@@ -1,19 +1,29 @@
+/*jshint esversion: 6 */
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Segment, Divider } from 'semantic-ui-react';
+import ArtObject from './Components/ArtObject'
+import data from './data.json';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      records: data
+    };
+
+  }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div>
+        <Segment inverted>
+          <Divider horizontal inverted>J. Paul Getty Museum | The Getty</Divider>
+        </Segment>
+        <div className="ui items">
+          <ArtObject artData={this.state.records} />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
+
+
     );
   }
 }
