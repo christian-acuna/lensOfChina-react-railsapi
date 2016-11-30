@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <Segment inverted>
-          <Divider horizontal inverted>J. Paul Getty Museum | The Getty</Divider>
+          <Divider horizontal inverted>The Getty</Divider>
         </Segment>
         <div className="ui items">
           <ArtObject artData={this.state.records} />
