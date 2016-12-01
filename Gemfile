@@ -28,6 +28,11 @@ gem 'foreman', '~> 0.82.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'capistrano',         require: false
+  gem 'capistrano-rbenv',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
   gem 'byebug', platform: :mri
 end
 
