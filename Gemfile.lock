@@ -165,6 +165,7 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-puma
   foreman (~> 0.82.0)
+  json
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)

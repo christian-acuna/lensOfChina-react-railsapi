@@ -11,6 +11,7 @@ gem 'puma', '~> 3.0'
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'rack-attack'
+gem 'json'
 
 gem 'foreman', '~> 0.82.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 import React, { Component } from 'react';
-import { Segment, Divider } from 'semantic-ui-react';
-import ArtObject from './Components/ArtObject'
+import { Segment, Divider, Card } from 'semantic-ui-react';
+
+import ArtObject from './Components/ArtObject';
 import data from './data.json';
 
 class App extends Component {
@@ -18,9 +19,11 @@ class App extends Component {
         <Segment inverted>
           <Divider horizontal inverted>The Getty</Divider>
         </Segment>
-        <div className="ui items">
-          <ArtObject artData={this.state.records} />
-        </div>
+        <Card.Group itemsPerRow={2}>
+          {
+            this.state.records.map((record, index) => <ArtObject key={index} artData={record.attributes} />)
+          }
+        </Card.Group>
       </div>
 
 
