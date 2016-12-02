@@ -7,6 +7,13 @@ function getData() {
     .then(parseJSON);
 }
 
+function search(query) {
+  return fetch(`/api/getty/search?q=${query}`, {
+    accept: 'application/json',
+  }).then(checkStatus)
+    .then(parseJSON);
+}
+
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
@@ -23,5 +30,5 @@ function parseJSON(response) {
   return response.json();
 }
 
-const Client = { getData };
+const Client = { getData, search };
 export default Client;

@@ -31,10 +31,15 @@ i.icon {
   transition: left 0.5s ease;
 }
 
+.overlay.fixed {
+  z-ind;
+}
+
 .overlay.fixed #map-pile {
   height: 400px;
   width: 320px;
   left: 720px;
+
 }
 
 .overlay.fixed #map {

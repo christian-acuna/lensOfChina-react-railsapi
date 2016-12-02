@@ -10,10 +10,31 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      records: []
+      records: [],
+      value: ''
     };
 
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+   const query = this.state.value;
+
+   if (query !== '') {
+    Client.search(query).then((response) => (
+      this.setState({
+        records: response.data
+      })
+    ));
+   }
+   event.preventDefault();
+ }
 
   componentWillMount() {
     Client.getData().then((response) => (
@@ -23,6 +44,14 @@ class App extends Component {
       ));
   }
 
+// handleSearchCancel() {
+//   this.setState({
+//     matchingFoods: [],
+//     showRemoveIcon: false,
+//   });
+//   this.refs.search.value = '';
+// }
+
   render() {
     return (
       <div>
@@ -30,7 +59,14 @@ class App extends Component {
           <Divider horizontal inverted>The Getty</Divider>
         </Segment>
         <Segment stacked>
-          <Input fluid action='Search' placeholder='Search...' />
+          <form onSubmit={this.handleSubmit}>
+          <Input
+            fluid
+            placeholder='Search...'
+            value={this.state.value}
+            onChange={this.handleChange}/>
+            <input type="submit" value="Submit" />
+          </form>
         </Segment>
         <Card.Group itemsPerRow={2}>
           {
