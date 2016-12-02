@@ -8,7 +8,13 @@ const ArtObject = React.createClass({
   render: function() {
     return (
       <Card color='red'>
-        <Image src={this.props.artData['image-thumb-uri']} alt={this.props.artData['primary-title']} shape='rounded'/>
+        <Image
+          src={this.props.artData['image-thumb-uri']}
+          as='a'
+          href={this.props.artData['record-link']}
+          alt={this.props.artData['primary-title']}
+          target="_blank"
+          shape='rounded'/>
         <Card.Content>
            <Card.Header
              as='a'
