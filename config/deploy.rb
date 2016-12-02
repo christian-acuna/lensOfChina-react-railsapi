@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 # Change these
-server '138.197.4.42', user: 'deploy', roles: [:web, :app, :db], primary: true
+server '138.197.4.42', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:christian-acuna/lensOfChina-react-railsapi.git'
 set :application,     'lensOfChina'
