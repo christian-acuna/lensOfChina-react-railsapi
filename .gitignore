@@ -18,3 +18,5 @@ vendor/*
 .byebug_history
 
 Procfile
+
+config/database.yml
