@@ -6,7 +6,8 @@ server '138.197.4.42', user: 'deploy', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:christian-acuna/lensOfChina-react-railsapi.git'
 set :application,     'lensOfChina'
-set :port,            22
+set :port,            22,
+set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 set :rbenv_type, :user # or :system, depends on your rbenv setup
