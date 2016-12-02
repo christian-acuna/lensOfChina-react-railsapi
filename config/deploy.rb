@@ -1,3 +1,4 @@
+require 'capistrano/rails/migrations'
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
@@ -80,7 +81,6 @@ namespace :deploy do
   end
 
   before :starting,     :check_revision
-  # after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 end
