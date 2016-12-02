@@ -11,3 +11,32 @@
 i.icon {
   margin: 0;
 }
+
+#map {
+  height: 400px;
+
+}
+
+#map-pile {
+  margin-bottom: 56px;
+}
+
+/*.overlay {
+  float: left;
+  margin: 0em 3em 1em 0em;
+}*/
+.overlay #map-pile {
+  position: relative;
+  left: 0;
+  transition: left 0.5s ease;
+}
+
+.overlay.fixed #map-pile {
+  height: 400px;
+  width: 320px;
+  left: 720px;
+}
+
+.overlay.fixed #map {
+    height: 370px;
+}

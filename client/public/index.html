@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="%PUBLIC_URL%/semantic.min.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/index.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -18,10 +20,25 @@
     <title>React App</title>
   </head>
   <body>
-    <div class="main ui text container">
-      <h1 class="ui dividing centered header">Lens of China</h1>
-      <div id="root"></div>
-    </div>
+
+      <div class="main ui text container">
+
+        <h1 class="ui dividing centered header">Lens of China</h1>
+        <div class="overlay">
+          <div class="ui piled segment" id="map-pile">
+            <div id='map'></div>
+          </div>
+        </div>
+      </div>
+        <div class="ui text container">
+          <div class="ui segment">
+          <div id="root"></div>
+        </div>
+      </div>
+
+
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -32,5 +49,13 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+    <script src="%PUBLIC_URL%/map.js" charset="utf-8"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/components/sticky.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/components/visibility.min.js"></script>
+    <script src="%PUBLIC_URL%/main.js" charset="utf-8"></script>
   </body>
 </html>
