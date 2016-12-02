@@ -6,6 +6,10 @@ $(function() {
 
   $('.overlay').visibility({
     type: 'fixed',
-    offset: 80
+    offset: 90
+  });
+
+  $('#museum-title').visibility({
+    type: 'fixed',
   });
 });

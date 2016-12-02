@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Segment inverted>
+        <Segment inverted id="museum-title">
           <Divider horizontal inverted>The Getty</Divider>
         </Segment>
         <Card.Group itemsPerRow={2}>
