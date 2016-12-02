@@ -9,8 +9,31 @@
 GettyObject.delete_all
 
 require 'json'
-file = File.read('./db/shanghai.json')
-data_hash = JSON.parse(file)
+shanghai = File.read('./db/shanghai.json')
+data_hash = JSON.parse(shanghai)
+records = data_hash["Response"]["doc"]["record"]
+
+records.each do |record|
+  GettyObject.create!(
+    culture: record["Culture"],
+    date: record["Date"],
+    department: record["Department"],
+    dimensions: record["Dimensions"],
+    maker_name: record["MakerName"],
+    object_number: record["ObjectNumber"],
+    place: record["Place"],
+    primary_title: record["PrimaryTitle"],
+    record_ID: record["recordID"],
+    record_link: record["recordLink"],
+    source: record["Source"],
+    record_type: record["Type"],
+    image_thumb_URI: record["imageThumbURI"],
+    medium: record["Medium"]
+  )
+end
+
+beijing = File.read('./db/beijing.json')
+data_hash = JSON.parse(beijing)
 records = data_hash["Response"]["doc"]["record"]
 
 records.each do |record|
