@@ -2,7 +2,7 @@ class GettyObjectsController < ApplicationController
   def index
     render(
       status: 200,
-      json: GettyObject.all
+      json: GettyObject.all.limit(20)
     )
   end
 
