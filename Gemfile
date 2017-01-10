@@ -14,6 +14,7 @@ gem 'rack-attack'
 gem 'json'
 
 gem 'foreman', '~> 0.82.0'
+gem 'rack-cors', :require => 'rack/cors'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
